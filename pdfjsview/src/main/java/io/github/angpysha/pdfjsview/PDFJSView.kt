@@ -30,6 +30,7 @@ class PDFJSView @JvmOverloads constructor(
 ) : RelativeLayout(context, attrs, defStyle) {
 
     val domain = "pdfjsview.dev"
+
     private lateinit var pdfView: WebView
 
     var source: Uri = Uri.EMPTY
@@ -103,28 +104,10 @@ class PDFJSView @JvmOverloads constructor(
         })
 
         val webViewSettings: WebSettings = pdfView.settings
-        // Setting this off for security. Off by default for SDK versions >= 16.
-        // Setting this off for security. Off by default for SDK versions >= 16.
         webViewSettings.allowFileAccessFromFileURLs = false
-        // Off by default, deprecated for SDK versions >= 30.
-        // Off by default, deprecated for SDK versions >= 30.
         webViewSettings.allowUniversalAccessFromFileURLs = false
-        // Keeping these off is less critical but still a good idea, especially if your app is not
-        // using file:// or content:// URLs.
-        // Keeping these off is less critical but still a good idea, especially if your app is not
-        // using file:// or content:// URLs.
         pdfView.settings.allowFileAccess = false
         pdfView.settings.allowContentAccess = false
-
-        // Assets are hosted under http(s)://appassets.androidplatform.net/assets/... .
-        // If the application's assets are in the "main/assets" folder this will read the file
-        // from "main/assets/www/index.html" and load it as if it were hosted on:
-        // https://appassets.androidplatform.net/assets/www/index.html
-
-        // Assets are hosted under http(s)://appassets.androidplatform.net/assets/... .
-        // If the application's assets are in the "main/assets" folder this will read the file
-        // from "main/assets/www/index.html" and load it as if it were hosted on:
-        // https://appassets.androidplatform.net/assets/www/index.html
         pdfView.loadUrl("https://${domain}/assets/pdfjs/web/viewer.html")
     }
 }
