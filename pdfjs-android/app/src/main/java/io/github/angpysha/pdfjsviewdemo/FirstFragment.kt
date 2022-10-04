@@ -76,6 +76,11 @@ class FirstFragment : Fragment() {
                 .setAction(Intent.ACTION_GET_CONTENT)
             getContent.launch("*/*")
         }
+
+        binding.openActivityButton.setOnClickListener {
+            val startIntent = Intent(activity, ComposeHostActivity::class.java)
+            activity?.startActivity(startIntent)
+        }
     }
 
     override fun onDestroyView() {
