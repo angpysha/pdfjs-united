@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Andrii/AndroidStudioProjects/PDFJSViewDemo/app/src/main/res/layout/activity_compose_host.xml" value="0.26443768996960487" />
         <entry key="..\:/Users/Andrii/AndroidStudioProjects/PDFJSViewDemo/app/src/main/res/layout/content_main.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/Andrii/AndroidStudioProjects/PDFJSViewDemo/app/src/main/res/layout/fragment_first.xml" value="0.22" />
+        <entry key="..\:/Users/Andrii/AndroidStudioProjects/PDFJSViewDemo/app/src/main/res/layout/fragment_second.xml" value="0.5086050724637681" />
         <entry key="..\:/Users/Andrii/AndroidStudioProjects/PDFJSViewDemo/pdfjsview/src/main/res/layout/pdfview.xml" value="0.2817028985507246" />
       </map>
     </option>

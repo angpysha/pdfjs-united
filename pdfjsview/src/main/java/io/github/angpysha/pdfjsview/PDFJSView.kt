@@ -46,7 +46,7 @@ class PDFJSView @JvmOverloads constructor(
             val contentResolver = context.contentResolver ?: return
 
             val fileName = value.lastPathSegment
-
+            fileName?.let { str ->
             val file = File(filesDir, fileName)
             try {
                 file.parentFile.mkdirs()
@@ -66,6 +66,7 @@ class PDFJSView @JvmOverloads constructor(
             it.evaluateJavascript(script, {st ->
 
             })
+            }
         }
     }
 

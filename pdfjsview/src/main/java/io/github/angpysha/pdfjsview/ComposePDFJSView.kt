@@ -12,8 +12,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import java.lang.reflect.Modifier
 
 @Composable
-fun ComposePDFJSView() {
-    val uri = mutableStateOf<Uri>(Uri.EMPTY)
+fun ComposePDFJSView(uri: Uri? = null) {
+    //val uri = mutableStateOf<Uri>(Uri.EMPTY)
 
     AndroidView(
         //modifier = Modifier.fillMaxSize(),
@@ -23,7 +23,9 @@ fun ComposePDFJSView() {
             }
         },
         update = { view ->
-            view.source = uri.value
+            uri?.let {
+                view.source = uri
+            }
         }
     )
 }
